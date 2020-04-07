@@ -19,8 +19,8 @@ function demarrerLaMontre() {
   // Hint : Tous les aiguilles doivent se déplacer chaque second selon un degré
 
   let ssRotation = ss * 360; // 360° / 60sec
-  let mmRotation = mm * 360; // 360° / 60min // evey min ,6°.  6/60
-  let hhRotation = hh * 360; // 360° / 12h // evey hour ,30°. 30/60
+  let mmRotation = mm * 360; // 360° / 60min 
+  let hhRotation = hh * 360; // 360° / 12h 
 //   console.log(ssRotation);
   console.log(mmRotation);
 //   console.log(hhRotation);
