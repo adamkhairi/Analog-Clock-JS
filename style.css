@@ -15,7 +15,7 @@
 /* Clock styles */
 .circle {
   fill: none;
-  stroke: darkred;
+  stroke: orange;
   stroke-width: 16;
   stroke-miterlimit: 10;
 }
@@ -25,30 +25,35 @@
 }
 .hour-marks {
   fill: none;
-  stroke: grey;
-  stroke-width: 9;
+  stroke: black;
+  stroke-width: 5;
   stroke-miterlimit: 10;
 }
 
 .hour-arm {
   fill: none;
-  stroke: yellowgreen;
+  stroke: rgb(54, 54, 54);
   stroke-width: 17;
   stroke-miterlimit: 10;
+  stroke-linejoin: round;
 }
 
 .minute-arm {
   fill: none;
-  stroke: skyblue;
+  stroke: grey;
   stroke-width: 11;
   stroke-miterlimit: 10;
+  stroke-linejoin: round;
+
 }
 
 .second-arm {
   fill: none;
-  stroke: yellow;
+  stroke: darkred;
   stroke-width: 4;
   stroke-miterlimit: 10;
+  stroke-linejoin: round;
+
 }
 
 /* Transparent box ensuring arms center properly. */
