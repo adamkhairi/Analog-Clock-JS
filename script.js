@@ -10,21 +10,26 @@ function demarrerLaMontre() {
 
   //Ajouter l'heure , minite , seconde  dans des varaiables
 
-  let hh = clock.getHours() % 12;
-  let mm = clock.getMinutes();
-  let ss = clock.getSeconds();
+  let ss = (clock.getSeconds() )/60;
+  let mm = (clock.getMinutes() + ss) / 60;
+//   console.log(mm);
+
+  let hh = (clock.getHours() + mm) / 12;
   // Calculer de degré de mouvement de l'aiguille heure, de l'aiguille minute, de l'aiguille seconde
   // Hint : Tous les aiguilles doivent se déplacer chaque second selon un degré
 
-  let hhRotation = hh * 30 + 0.5 * mm; // 360° / 12h // evey min ,6° = 6/60
-  let mmRotation = mm * 6 + 0.1 * ss; // 360° / 60min // evey min ,6° = 6/60
-  let ssRotation = ss * 6; // 360° / 60min
+  let ssRotation = ss * 360; // 360° / 60sec
+  let mmRotation = mm * 360; // 360° / 60min // evey min ,6°.  6/60
+  let hhRotation = hh * 360; // 360° / 12h // evey hour ,30°. 30/60
+//   console.log(ssRotation);
+  console.log(mmRotation);
+//   console.log(hhRotation);
 
   // Déplacer les aiguilles
 
-  AIGUILLEHR.style.transform = "rotate(" + hhRotation + "deg)";
-  AIGUILLEMIN.style.transform = "rotate(" + mmRotation + "deg)";
   AIGUILLESEC.style.transform = "rotate(" + ssRotation + "deg)";
+  AIGUILLEMIN.style.transform = "rotate(" + mmRotation + "deg)";
+  AIGUILLEHR.style.transform = "rotate(" + hhRotation + "deg)";
 }
 // Exercuter la fonction chaque second
 var interval = setInterval(demarrerLaMontre, 1000);
