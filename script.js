@@ -13,7 +13,6 @@ function demarrerLaMontre() {
   let ss = (clock.getSeconds() )/60;
   let mm = (clock.getMinutes() + ss) / 60;
 //   console.log(mm);
-
   let hh = (clock.getHours() + mm) / 12;
   // Calculer de degré de mouvement de l'aiguille heure, de l'aiguille minute, de l'aiguille seconde
   // Hint : Tous les aiguilles doivent se déplacer chaque second selon un degré
